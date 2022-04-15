@@ -1,3 +1,4 @@
+require 'pry'
 @morse_decoder = {
   '.-' => 'A',
   '-...' => 'B',
@@ -39,17 +40,18 @@
 def decode_char(str)
   @morse_decoder[str]
 end
-puts(decode_char('.-'))
+
+# puts(decode_char('.-'))
 
 def decode_word(str)
   chars = str.split
-  chars.map { |n| decode_char(n) }.join
+  decoded = chars.map { |n| decode_char(n) }.join(" ")
 end
 puts(decode_word('-- -.--'))
 
-def decode(str)
-  words = str.split('   ')
-  words.map { |n| decode_word(n) }.join(' ')
-end
+# def decode(str)
+#   words = str.split('   ')
+#   words.map { |n| decode_word(n) }.join(' ')
+# end
 
-puts(decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'))
+# puts(decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'))
