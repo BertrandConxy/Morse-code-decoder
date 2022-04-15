@@ -51,6 +51,11 @@ def decode_word(str)
   # Join the characters again to form the word
   decoded_chars_array.join("  ")
 end
+# The bug is that the characters are still separated by spaces
+
+
+
+
 puts(decode_word('-- -.--'))
 
 # def decode(str)
