@@ -45,7 +45,8 @@ end
 
 def decode_word(str)
   chars = str.split
-  decoded = chars.map { |n| decode_char(n) }.join(" ")
+  decoded = chars.map { |n| decode_char(n) }
+  decoded.join(" ")
 end
 puts(decode_word('-- -.--'))
 
