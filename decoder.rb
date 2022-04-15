@@ -44,9 +44,12 @@ end
 # puts(decode_char('.-'))
 
 def decode_word(str)
+  # Split the word into individual characters
   chars = str.split
-  decoded = chars.map { |n| decode_char(n) }
-  decoded.join(" ")
+  # decode each character
+  decoded_chars_array = chars.map { |n| decode_char(n) }
+  # Join the characters again to form the word
+  decoded_chars_array.join("  ")
 end
 puts(decode_word('-- -.--'))
 
